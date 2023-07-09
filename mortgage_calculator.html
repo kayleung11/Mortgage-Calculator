@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kay's Mortgage Calculator</title>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./mortgage_calculator.css" type="text/css">
+    <link rel="icon" href="./resources/calculator.png" type="image/png" sizes="64x64"> 
+    <script src="https://kit.fontawesome.com/b94f3bd2cb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li class="nav-item">
+                    <a href="#">
+                        Project 1
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        Project 2
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        Project 3
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        Project 4
+                    </a>
+                </li>
+
+                <div class="nav-item dropdown">      
+                    <a class="dropbtn" href="#" >
+                        Project 5 <i class="fas fa-sort-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>              
+                </div>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="title">Kay's Mortgage Calculator</h1>
+            <div class="cal-body">
+                <form>
+                    <div class="input-container">
+                        <label for="loan">Loan Amount</label>
+                        <input id="loan" type="text" placeholder="$" />    
+                    </div>
+                    <div class="input-container">
+                        <label for="rate">Interest Rate</label>
+                        <input id="rate" type="text" placeholder="%   (e.g. 5.5)"/>    
+                    </div>
+                    <div class="input-container">
+                        <label for="frequency">Payment Frequency</label>
+                        <select id="frequency">
+                            <option disabled selected value=''>Please choose the frequency</option>
+                            <option value="52">Weekly</option>
+                            <option value="26">Fortnightly</option>
+                            <option value="12">Monthly</option>
+                        </select>
+                    </div>
+                    <div class="slidecontainer"> 
+                        <div>
+                            <label for="term">Loan Term</label>
+                            <p id="loan-term">15</p>    
+                        </div>
+                        <input id="slider" class="slider" type="range" min="0.5" max="30" value="15" step="0.5" />    
+                    </div>
+                    <div class="result">
+                        <button type="button" id="calculateBtn">Calculate</button>
+                        <div>
+                            <p>Repayment</p>
+                            <p id="repayment">0</p>
+                        </div >
+                        <div>
+                            <p>Interest Paid</p>
+                            <p id="interest">0</p>
+                        </div>
+                        <div>
+                            <p>Principle Paid</p>
+                            <p id="principle">0</p>
+                        </div>
+                        <div>
+                            <p>Total amount Paid</p>
+                            <p id="total">0</p>
+                        </div>
+                        <div>
+                            <p>Number of payment</p>
+                            <p id="numOfPay">0</p>
+                        </div>
+                        <p>- Please insert all fields to calculate result -</p>
+                    </div>
+                </form>
+            </div>
+    </main>
+    <script src="./mortgage_calculator.js"></script>
+</body>
+</html>

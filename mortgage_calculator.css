@@ -1,0 +1,261 @@
+html {
+    font-size: 16px;
+    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Navbar properties*/
+.navbar {
+    z-index: 1;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0px;
+    background-color: #2b2b46;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 5rem;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 20%;
+    height: 5rem;
+    padding: 0;
+}
+
+.nav-item:hover {
+    background-color: rgb(127, 210, 212);
+}
+
+.nav-item:hover a {
+    color: rgba(109, 85, 243);
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    background-color: rgb(127, 210, 212);
+    width: 20%;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(10, 239, 255);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Main body*/
+
+main {
+    margin-top: 5rem;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    height: 1vh;
+    margin: 1rem 0;
+}
+
+.title {
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+
+.cal-body {
+    margin: 1rem auto;
+    padding: 2rem;
+    max-width: 500px;
+    border-radius: 0.25rem;
+    border: 2px black solid;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 0.75rem;
+    transition: ease 200ms;
+}
+
+.cal-body:hover {
+    background: lightcyan;
+    transition: ease 200ms;
+}
+
+/*Input styling*/
+
+.input-container {
+    width: 85%;
+    margin: 1.5rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-container input, select {
+    font-size: 1rem;
+    width: 50%;
+    height: 2.5rem;
+    padding: 5px 10px;
+    border-radius: 0.25rem;
+    border: solid black 0.75px;
+}
+
+select {
+    width: 60%;
+}
+
+.input-container input:focus, select:focus {
+    border: 1px solid #555555;
+    background-color: lightblue;
+    box-shadow: 0px 0px 10px 0px rgb(101, 101, 223, 0.5) ;
+    transition: ease-in-out 100ms;
+}
+
+/*Slider*/
+.slidecontainer {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.slidecontainer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: 200ms;
+    border-radius: 0.5rem;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: black;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: black;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: 1px solid white;
+}
+
+/*Result*/
+.result > div {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 1rem auto;
+}
+
+#calculateBtn {
+    display: none;
+    width: 35%;
+    height: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    background-color: rgb(41, 55, 255);
+    color: white;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#calculateBtn:focus {
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#calculateBtn:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+#calculateBtn:active {
+    transform: scale(0.99);
+}
+
+/* Small screens  */
+@media only screen and (max-width: 600px) {
+
+    .navbar {
+        font-size: 1rem;
+    }
+
+    .cal-body {
+        width: 60%;
+        margin: 1rem auto;
+        padding: 1.25rem;
+    }
+
+    .input-container {
+        width: 100%;
+    }
+
+    select {
+        font-size: 0.7rem;
+    }
+}
